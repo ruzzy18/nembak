@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nembak Cewek</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="main-content">
+      <div class="heart">❤️</div>
+      <h1>Aku Suka Kamu!</h1>
+      <p>Maukah kamu jadi pacarku?</p>
+      <button class="btn" onclick="jawab('ya')">Iya</button>
+      <button class="btn" onclick="jawab('tidak')">Tidak</button>
+    </div>
+    <div class="container hidden" id="jawaban-ya">
+      <div class="heart">💖</div>
+      <h1>Yeay! Makasih ya 😍</h1>
+      <p>Aku janji bakal selalu sayang sama kamu!</p>
+    </div>
+    <div class="container hidden" id="jawaban-tidak">
+      <div class="heart">😢</div>
+      <h1>Yah, gapapa kok...</h1>
+      <p>Semoga kita tetap bisa jadi teman baik ya!</p>
+    </div>
+    <script>
+      function jawab(pilihan) {
+        document.getElementById("main-content").classList.add("hidden");
+        if (pilihan === "ya") {
+          document.getElementById("jawaban-ya").classList.remove("hidden");
+        } else {
+          document.getElementById("jawaban-tidak").classList.remove("hidden");
+        }
+      }
+    </script>
+  </body>
+</html>
